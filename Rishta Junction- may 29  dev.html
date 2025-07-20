@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rishta Junction - Find Your Perfect Match</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles */
+
+    /* Scrollbar for the Success Stories cards horizontally on smaller screens */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Quote icon style for Success Stories */
+    .quote-icon {
+      font-family: "Segoe UI Symbol", Arial, sans-serif;
+      font-size: 1.75rem;
+      color: #f87171; /* Tailwind Red 400 */
+      opacity: 0.3;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      user-select: none;
+    }
+
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-rose-50 to-white text-gray-900 font-sans leading-relaxed antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center space-x-2">
+        <div class="bg-red-700 rounded-full p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-1.333-8-7-8-11a4 4 0 018 0 4 4 0 018 0c0 4-4 9.667-8 11z" /></svg>
+        </div>
+        <span class="text-red-700 font-bold text-xl select-none">Rishta Junction</span>
+      </a>
+
+      <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="#home" class="hover:text-red-700 transition">Home</a>
+        <a href="#features" class="hover:text-red-700 transition">Features</a>
+        <a href="#success" class="hover:text-red-700 transition">Success Stories</a>
+        <a href="#contact" class="hover:text-red-700 transition">Contact</a>
+      </nav>
+
+      <div class="space-x-3">
+        <button class="px-4 py-1 font-semibold rounded text-red-700 border border-red-700 hover:bg-red-700 hover:text-white transition">Sign In</button>
+        <button class="px-5 py-2 font-semibold rounded bg-red-700 text-white hover:bg-red-800 transition">Join Now</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="max-w-7xl mx-auto px-6 pt-12 md:pt-24 pb-20 grid md:grid-cols-12 gap-12 items-center relative">
+    <!-- Trust Badge -->
+    <div
+      class="absolute top-8 left-6 md:left-20 flex items-center bg-red-100 text-red-700 text-sm font-semibold rounded-full shadow px-3 py-1 space-x-2 select-none"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="#dc2626" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v1h1a2 2 0 012 2v5a2 2 0 01-1.447 1.936l-4.5 1.8a2 2 0 01-1.106 0l-4.5-1.8A2 2 0 012 13V7a2 2 0 012-2V5z" clip-rule="evenodd"/></svg>
+      <span>Trusted by 10,000+ families</span>
+    </div>
+
+    <article class="md:col-span-6 space-y-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Find Your <br />
+        <span class="text-red-700 underline decoration-red-700 decoration-4">Perfect Match</span>
+      </h1>
+      <p class="text-gray-700 max-w-xl">
+        Rishta Junction bridges tradition and technology, helping you discover <span class="text-red-600 font-semibold">meaningful connections</span> that honor your cultural values while embracing modern matchmaking.
+      </p>
+      <div class="flex space-x-4">
+        <button class="bg-red-700 hover:bg-red-800 text-white px-6 py-3 rounded shadow-md flex items-center gap-2 font-semibold transition">
+          Start Your Journey
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </button>
+        <button class="border border-red-700 text-red-700 px-6 py-3 rounded hover:bg-red-50 font-semibold transition">Learn More</button>
+      </div>
+      <div class="mt-10 flex justify-start space-x-14 text-center text-gray-600 select-none">
+        <div>
+          <p class="font-bold text-red-700 text-xl">50K+</p>
+          <p class="font-semibold">Active Members</p>
+        </div>
+        <div>
+          <p class="font-bold text-red-700 text-xl">5K+</p>
+          <p class="font-semibold">Success Stories</p>
+        </div>
+        <div>
+          <p class="font-bold text-red-700 text-xl">99%</p>
+          <p class="font-semibold">Privacy Protected</p>
+        </div>
+      </div>
+    </article>
+
+    <aside class="md:col-span-6 grid grid-cols-2 gap-6 relative px-4 md:px-0">
+      <div class="bg-white rounded-2xl p-6 shadow-lg flex flex-col items-start space-y-2 transform hover:scale-[1.03] transition duration-300 ease-out cursor-default select-none">
+        <div class="bg-red-700 p-2 rounded-lg text-white mb-3 shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 20h9" />
+            <circle cx="12" cy="12" r="9" stroke="none" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 16v-8m-4 4h8" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Cultural Harmony</h3>
+        <p class="text-gray-600 text-sm">Respecting traditions while embracing modernity.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-lg flex flex-col items-start space-y-2 transform hover:scale-[1.03] transition duration-300 ease-out cursor-default select-none">
+        <div class="bg-red-700 p-2 rounded-lg text-white mb-3 shadow flex justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-.38a12.042 12.042 0 01-6.16 6.18v-5.8z" /></svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Verified Profiles</h3>
+        <p class="text-gray-600 text-sm">Authentic connections with genuine people.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-lg flex flex-col items-start space-y-2 transform hover:scale-[1.03] transition duration-300 ease-out cursor-default select-none">
+        <div class="bg-gray-900 p-2 rounded-lg text-white mb-3 shadow flex justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4h4m-4 0h-4m4 0v4" />
+            <circle cx="12" cy="12" r="10" stroke="none" /></svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Secure Platform</h3>
+        <p class="text-gray-600 text-sm">Your privacy and security are our priority.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-lg flex flex-col items-start space-y-2 transform hover:scale-[1.03] transition duration-300 ease-out cursor-default select-none">
+        <div class="bg-red-600 p-2 rounded-lg text-white mb-3 shadow flex justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a5 5 0 00-10 0v2" />
+            <rect x="7" y="9" width="10" height="11" rx="2" ry="2" /></svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Smart Matching</h3>
+        <p class="text-gray-600 text-sm">AI-powered compatibility for perfect matches.</p>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-2 select-none">Why Choose <span class="text-red-700">Rishta Junction?</span></h2>
+    <p class="text-center max-w-3xl mx-auto text-gray-700 mb-12">
+      We combine the best of traditional matchmaking with cutting-edge technology to help you find your <span class="font-semibold text-red-600">perfect life partner.</span>
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center space-y-3 text-center cursor-default select-none hover:shadow-2xl transition">
+        <div class="bg-red-600 p-3 rounded-xl text-white inline-flex shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 21c-4-1.333-8-7-8-11a4 4 0 018 0 4 4 0 018 0c0 4-4 9.667-8 11z" /></svg>
+        </div>
+        <h3 class="font-semibold text-lg text-gray-900">Cultural Compatibility</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Find matches that align with your cultural values, traditions, and family expectations while embracing modern perspectives.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center space-y-3 text-center cursor-default select-none hover:shadow-2xl transition">
+        <div class="bg-gray-900 p-3 rounded-xl text-white inline-flex shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m6-6v6m-6-6H6m6 6H18" /></svg>
+        </div>
+        <h3 class="font-semibold text-lg text-gray-900">Verified Profiles</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Every profile is thoroughly verified to ensure authenticity. Connect with genuine people looking for meaningful relationships.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center space-y-3 text-center cursor-default select-none hover:shadow-2xl transition">
+        <div class="bg-red-700 p-3 rounded-xl text-white inline-flex shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+              d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        </div>
+        <h3 class="font-semibold text-lg text-gray-900">Smart Matching Algorithm</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Our AI-powered system analyzes compatibility factors to suggest the most suitable matches based on your preferences.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center space-y-3 text-center cursor-default select-none hover:shadow-2xl transition">
+        <div class="bg-red-700 p-3 rounded-xl text-white inline-flex shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8v-1a4 4 0 014-4m8 0a4 4 0 014 4v1m-8 12v-4m6 0a6 6 0 10-12 0v4h12z" /></svg>
+        </div>
+        <h3 class="font-semibold text-lg text-gray-900">Family Involvement</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Respect family traditions with features that allow family members to participate in the matchmaking process appropriately.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center space-y-3 text-center cursor-default select-none hover:shadow-2xl transition">
+        <div class="bg-gray-900 p-3 rounded-xl text-white inline-flex shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><circle cx="12" cy="12" r="10" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" /></svg>
+        </div>
+        <h3 class="font-semibold text-lg text-gray-900">Global Community</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Connect with compatible partners from around the world while staying true to your cultural roots and values.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col items-center space-y-3 text-center cursor-default select-none hover:shadow-2xl transition">
+        <div class="bg-red-600 p-3 rounded-xl text-white inline-flex shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round"
+              d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2h-7a2 2 0 01-2-2v-2m-1-3l-4 4m0 0l4 4m-4-4h18" /></svg>
+        </div>
+        <h3 class="font-semibold text-lg text-gray-900">Secure Communication</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Chat safely with potential matches through our secure messaging system with privacy controls and moderation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="max-w-5xl mx-auto px-6 mb-24">
+    <div
+      class="rounded-3xl bg-gradient-to-r from-red-700 to-black p-10 shadow-lg text-white text-center max-w-5xl mx-auto cursor-default select-none"
+    >
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">Ready to Find Your Perfect Match?</h2>
+      <p class="max-w-lg mx-auto text-sm md:text-base leading-relaxed mb-6">
+        Join thousands of successful couples who found love through Rishta Junction. Your perfect match is just one click away.
+      </p>
+      <button
+        class="bg-white text-red-700 font-semibold px-7 py-3 rounded-full shadow-md hover:bg-gray-100 inline-flex items-center justify-center mx-auto gap-2 transition"
+      >
+        Get Started Today
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Success Stories Section -->
+  <section id="success" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-2 select-none text-red-700">Success Stories</h2>
+    <p class="text-center max-w-3xl mx-auto text-gray-700 mb-12">
+      Real couples, real love stories. See how Rishta Junction has helped thousands find their <span class="font-semibold text-red-600">perfect life partners.</span>
+    </p>
+
+    <div class="grid gap-10 md:grid-cols-2 scrollbar-hide overflow-x-auto pb-6">
+      <!-- Story 1 -->
+      <article
+        class="relative bg-white rounded-xl shadow-lg p-6 text-gray-800 cursor-default select-none transform transition hover:shadow-2xl"
+      >
+        <span class="quote-icon">“</span>
+        <header class="flex items-center gap-3 mb-3">
+          <div class="text-xl">👫</div>
+          <div>
+            <p class="font-semibold text-lg text-red-700">Priya &amp; Arjun</p>
+            <p class="text-xs text-gray-500">Mumbai, India</p>
+            <span class="inline-block text-gray-400 text-xs rounded-full bg-gray-200 px-3 py-1 mt-1 select-none"
+              >Married in December 2023</span
+            >
+          </div>
+        </header>
+        <div>
+          <div class="text-red-600 mb-2" aria-label="5 star rating" role="img">
+            ★★★★★
+          </div>
+          <blockquote class="text-sm italic leading-relaxed">
+            We found each other through Rishta Junction and couldn’t be happier! The platform perfectly balanced our traditional
+            values with modern convenience. Our families were involved throughout the process, making it even more special.
+          </blockquote>
+        </div>
+      </article>
+
+      <!-- Story 2 -->
+      <article
+        class="relative bg-white rounded-xl shadow-lg p-6 text-gray-800 cursor-default select-none transform transition hover:shadow-2xl"
+      >
+        <span class="quote-icon">“</span>
+        <header class="flex items-center gap-3 mb-3">
+          <div class="text-xl">👨‍👩‍👧‍👦</div>
+          <div>
+            <p class="font-semibold text-lg text-red-700">Sara & Ahmed</p>
+            <p class="text-xs text-gray-500">London, UK</p>
+            <span class="inline-block text-gray-400 text-xs rounded-full bg-gray-200 px-3 py-1 mt-1 select-none"
+              >Married in March 2024</span
+            >
+          </div>
+        </header>
+        <div>
+          <div class="text-red-600 mb-2" aria-label="5 star rating" role="img">
+            ★★★★★
+          </div>
+          <blockquote class="text-sm italic leading-relaxed">
+            As professionals living abroad, finding someone who understood our cultural background was challenging. Rishta Junction
+            made it possible to connect with like-minded individuals who shared our values and aspirations.
+          </blockquote>
+        </div>
+      </article>
+
+      <!-- Story 3 -->
+      <article
+        class="relative bg-white rounded-xl shadow-lg p-6 text-gray-800 cursor-default select-none transform transition hover:shadow-2xl"
+      >
+        <span class="quote-icon">“</span>
+        <header class="flex items-center gap-3 mb-3">
+          <div class="text-xl">👩‍❤️‍👨</div>
+          <div>
+            <p class="font-semibold text-lg text-red-700">Meera & Rajesh</p>
+            <p class="text-xs text-gray-500">Toronto, Canada</p>
+            <span class="inline-block text-gray-400 text-xs rounded-full bg-gray-200 px-3 py-1 mt-1 select-none"
+              >Married in August 2023</span
+            >
+          </div>
+        </header>
+        <div>
+          <div class="text-red-600 mb-2" aria-label="5 star rating" role="img">
+            ★★★★★
+          </div>
+          <blockquote class="text-sm italic leading-relaxed">
+            The verification process gave us confidence that we were meeting genuine people. The matching algorithm was spot on,
+            and we found our perfect match within 3 months. Thank you for bringing us together!
+          </blockquote>
+        </div>
+      </article>
+
+      <!-- Story 4 -->
+      <article
+        class="relative bg-white rounded-xl shadow-lg p-6 text-gray-800 cursor-default select-none transform transition hover:shadow-2xl"
+      >
+        <span class="quote-icon">“</span>
+        <header class="flex items-center gap-3 mb-3">
+          <div class="text-xl">👨‍❤️‍👨</div>
+          <div>
+            <p class="font-semibold text-lg text-red-700">Fatima & Hassan</p>
+            <p class="text-xs text-gray-500">Dubai, UAE</p>
+            <span class="inline-block text-gray-400 text-xs rounded-full bg-gray-200 px-3 py-1 mt-1 select-none"
+              >Married in January 2024</span
+            >
+          </div>
+        </header>
+        <div>
+          <div class="text-red-600 mb-2" aria-label="5 star rating" role="img">
+            ★★★★★
+          </div>
+          <blockquote class="text-sm italic leading-relaxed">
+            Rishta Junction understood our cultural needs perfectly. The platform allowed our families to be part of the journey while
+            giving us the privacy to get to know each other. We're grateful for this beautiful beginning.
+          </blockquote>
+        </div>
+      </article>
+    </div>
+
+    <!-- Statistics below success stories -->
+    <div
+      class="mt-16 max-w-5xl mx-auto p-6 bg-white rounded-3xl shadow-lg grid grid-cols-2 md:grid-cols-4 gap-6 text-center font-semibold text-gray-800 select-none"
+    >
+      <div class="bg-red-100 rounded-xl p-4">
+        <p class="text-2xl md:text-3xl text-red-700">5,000+</p>
+        <p class="text-sm md:text-base mt-1">Happy Couples</p>
+      </div>
+      <div class="bg-red-100 rounded-xl p-4">
+        <p class="text-2xl md:text-3xl text-red-700">98%</p>
+        <p class="text-sm md:text-base mt-1">Success Rate</p>
+      </div>
+      <div class="bg-red-100 rounded-xl p-4">
+        <p class="text-2xl md:text-3xl text-red-700">30</p>
+        <p class="text-sm md:text-base mt-1">Countries</p>
+      </div>
+      <div class="bg-red-100 rounded-xl p-4 flex flex-col items-center justify-center">
+        <p class="text-2xl md:text-3xl text-red-700 flex items-center gap-1">
+          4.9 <span aria-label="star" role="img" class="text-yellow-400">★</span>
+        </p>
+        <p class="text-sm md:text-base mt-1">User Rating</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-gray-300 pt-16 pb-4 select-none">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-center gap-2 font-bold text-red-600 text-xl select-text cursor-default">
+          <div class="bg-red-700 p-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4-1.333-8-7-8-11a4 4 0 018 0 4 4 0 018 0c0 4-4 9.667-8 11z" /></svg>
+          </div>
+          <div>Rishta Junction</div>
+        </div>
+        <p class="text-sm max-w-xs text-gray-400">
+          Bridging hearts across cultures. We’re dedicated to helping individuals find their perfect life partners through a platform that respects cultural values while embracing modern matchmaking technology.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" aria-label="Facebook" class="bg-red-700 hover:bg-red-800 rounded-full p-2 inline-flex">
+            <svg fill="white" viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.992 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.992 22 12z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="bg-red-700 hover:bg-red-800 rounded-full p-2 inline-flex">
+            <svg fill="white" viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 001.98-2.48 9.31 9.31 0 01-2.83 1.1 4.48 4.48 0 00-7.64 4.09A12.76 12.76 0 013 4.8a4.48 4.48 0 001.39 6 4.52 4.52 0 01-2.04-.56v.06a4.48 4.48 0 003.59 4.4 4.52 4.52 0 01-2.02.07 4.48 4.48 0 004.17 3.12A9 9 0 013 19.54a12.72 12.72 0 006.88 2" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="bg-red-700 hover:bg-red-800 rounded-full p-2 inline-flex">
+            <svg fill="white" viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
+              <path
+                d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2a3.75 3.75 0 00-3.75 3.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm4.25 3a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.5-3.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="bg-red-700 hover:bg-red-800 rounded-full p-2 inline-flex">
+            <svg fill="white" viewBox="0 0 24 24" aria-hidden="true" class="h-5 w-5">
+              <path
+                d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8 17v-7H5v7h3zm-1.5-8c1 0 1.5-.67 1.5-1.5S8.5 7 7.5 7 6 7.67 6 8.5 6.5 9 7.5 9zM19 17v-4a2 2 0 00-2-2h-.06a2 2 0 00-2 1.6V17h3v-4.6a.5.5 0 01.5-.5h.56a.5.5 0 01.5.5V17h1z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav aria-label="Quick Links" class="space-y-2 font-semibold text-sm text-red-600">
+        <h3 class="text-lg mb-5 font-bold">Quick Links</h3>
+        <a href="#home" class="block hover:text-red-400 transition">Home</a>
+        <a href="#about" class="block hover:text-red-400 transition">About Us</a>
+        <a href="#success" class="block hover:text-red-400 transition">Success Stories</a>
+        <a href="#contact" class="block hover:text-red-400 transition">Contact</a>
+      </nav>
+
+      <nav aria-label="Our Services" class="space-y-2 font-semibold text-sm text-red-600">
+        <h3 class="text-lg mb-5 font-bold">Our Services</h3>
+        <a href="#" class="block hover:text-red-400 transition">Free Matchmaking</a>
+        <a href="#" class="block hover:text-red-400 transition">VIP Services</a>
+        <a href="#" class="block hover:text-red-400 transition">Super VIP Services</a>
+        <a href="#" class="block hover:text-red-400 transition">Background Verification</a>
+        <a href="#" class="block hover:text-red-400 transition">Relationship Counseling</a>
+      </nav>
+
+      <section aria-label="Contact Us" class="space-y-3 text-sm">
+        <h3 class="text-lg mb-5 font-bold text-red-600">Contact Us</h3>
+        <address class="flex flex-col space-y-4 not-italic">
+          <a href="tel:+911234567890" class="flex items-center gap-3 hover:text-red-400 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linejoin="round" stroke-linecap="round" d="M3 5a2 2 0 012-2h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 010 1.414L8.414 8.414A1 1 0 007.707 8H5a2 2 0 00-2 2v4a2 2 0 002 2h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 010 1.414l-1.414 1.414a1 1 0 01-1.414 0A15 15 0 013 5z"/></svg>
+            +91 123 456 7890
+          </a>
+          <a href="mailto:info@rishtajunction.com" class="flex items-center gap-3 hover:text-red-400 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linejoin="round" stroke-linecap="round" d="M3 8l9 6 9-6M21 6v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6"/></svg>
+            info@rishtajunction.com
+          </a>
+          <span class="flex items-center gap-3 text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linejoin="round" stroke-linecap="round" d="M17.657 16.657L13.414 12 17.657 7.343a8 8 0 11-11.314 0L10.586 12l-4.243 4.657a8 8 0 0011.314 0z"/></svg>
+            Aligarh, Uttar Pradesh, India
+          </span>
+        </address>
+      </section>
+    </div>
+
+    <div class="text-gray-600 text-xs text-center mt-8 pb-6 select-text cursor-default">
+      &copy; 2025 Rishta Junction. All rights reserved.
+      <nav class="mt-2 space-x-4">
+        <a href="#" class="hover:text-red-400 transition">Terms of Service</a> |
+        <a href="#" class="hover:text-red-400 transition">Privacy Policy</a> |
+        <a href="#" class="hover:text-red-400 transition">Cookie Policy</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>
+
